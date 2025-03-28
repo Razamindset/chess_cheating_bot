@@ -1,0 +1,66 @@
+/venv
+venv
+chromedriver
+*.png
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+*.dll
+*.dylib
+*.pyd
+
+# Virtual environment
+venv/
+.env/
+.venv/
+
+# IDE / Editor files
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Logs and databases
+*.log
+*.sqlite3
+*.db
+
+# Environment variables and secrets
+.env
+*.pem
+*.crt
+*.key
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Compiled code
+dist/
+build/
+*.egg-info/
+
+# Caches
+.cache/
+*.mypy_cache/
+*.pytest_cache/
+.coverage
+nosetests.xml
+coverage.xml
+
+# Temporary files
+*.swp
+*.swo
+*.bak
+.DS_Store
+Thumbs.db
+
+# Selenium WebDriver cache
+chromedriver.log
+
+# Flask/Vercel temporary files
+instance/
+*.pid
+
+
+
