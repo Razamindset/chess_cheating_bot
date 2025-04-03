@@ -13,7 +13,7 @@ Welcome to the Chess Automation Bot project! This tool helps you analyze chess p
 - **HTML Parsing:** Extracts the chessboard, turn, and other game details directly from the website's HTML.
 - **Stockfish Analysis:** Uses Stockfish to find the best moves.
 - **Move Suggestions:** Shows you the best moves based on Stockfish's analysis.
-- **(TODO) Move Automation:** Automatically make the moves on the online chess platform (Currently in development).
+- **(Done for chess.com) Move Automation:** Automatically make the moves on the online chess platform (Currently in development).
 - **Lichess Compatibility:** Currently optimized for use on Lichess against the Stockfish bot.
 - **Chess.com Compatibility:** Fully functional with chess.com bots.
 
@@ -60,15 +60,15 @@ Welcome to the Chess Automation Bot project! This tool helps you analyze chess p
 
 **On lichess**
 
-- For best results, keep the chessboard at its normal size. Resizing might cause errors.
-- Always follow the rules of the website you are playing on.
-- This project is not responsible for any account gettign banned if used illegally or any other poiiitential lawsuits.
+- For best results, On lichess keep the chessboard at its normal size. Resizing might cause errors.
+- Always follow the rules of the platforms you are playing on.
+- This project is not responsible for any account getting banned if used illegally or if results in any other potential lawsuits. Any individual using it is solefully responsible himself.
 
 ## Chess.com Demo
 
 <p>
 <video width="640" height="480" controls>
-  <source src="./demo.webm">
+  <source src="demo.webm">
   Your browser does not support the video tag.
 </video>
 </p>
