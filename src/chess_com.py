@@ -7,6 +7,7 @@ import chess
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.by import By
 from stockfish import Stockfish
+from selenium.webdriver.common.by import By
 
 STOCKFISH_PATH = "/usr/games/stockfish"
 
@@ -34,6 +35,8 @@ def get_best_move(fen: str):
         print(f"Stockfish error: {e}. Reloading Stockfish.")
         stockfish = initialize_stockfish()
         return None
+
+
 
 def extract_game_info(driver):
     """Extracts FEN, side, and side to move from Chess.com HTML."""
@@ -71,6 +74,8 @@ def extract_game_info(driver):
         print(f"Error extracting game info: {e}")
         return None, None, None
 
+
+
 def extract_fen_from_chesscom(driver):
     try:
         board_element = driver.find_element("css selector", "wc-chess-board")
@@ -96,6 +101,7 @@ def extract_fen_from_chesscom(driver):
             if square:
                 piece = piece_map.get(piece_class, '.')
                 file = int(square[0]) - 1
+                rank = 8 - int(square[1])
                 rank = 8 - int(square[1])
                 board[rank][file] = piece
 
@@ -128,8 +134,6 @@ def algebraic_to_pixels(square: str, square_size: int):
     rank = int(square[1]) - 1 + 1
     square_class = "square-" + str(file) + str(rank)
     return square_class
-
-from selenium.webdriver.common.by import By
 
 def make_move(driver, move: str, square_size: int, my_side: str):
     try:
@@ -218,6 +222,7 @@ def main():
                 print(f"FEN: {fen}, My Side: {my_side}, Side to Move: {side_to_move}")
                 last_fen = fen
 
+                # If it is our turn
                 if side_to_move == my_side:
                     try:
                         board = chess.Board(fen)
